@@ -684,7 +684,7 @@ def _create_xml_node(key, value=''):
             key = 'oid-' + key
 
     xml_node = Element(key)
-    xml_node.text = value.decode("utf-8").strip()
+    xml_node.text = value.decode("utf-8","replace").strip()
     return xml_node
 
 
